@@ -20,6 +20,10 @@ export const RowContainer = styled.div`
   width: 100%;
   overflow-y: hidden;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+  -webkit-overflow-scrolling: touch;
   padding-bottom: ${({ theme }) => theme.spaces.small};
   margin-bottom: 8px;
   &:hover {

@@ -33,6 +33,7 @@ export const Container = styled.div`
     justify-content: start;
     max-width: 260px;
     min-width: 190px;
+    scroll-snap-align: start;
     gap: ${({ theme }) => theme.spaces.small};
     &:hover ${CoverButton} {
         display: flex;  
