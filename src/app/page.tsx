@@ -9,6 +9,7 @@ import SideMenu from "@/components/sidemenu";
 import { HomeBoard } from "@/components/maindashboard/Home/HomeBoard";
 
 export default function Home() {
+  
 
   return (
     <ThemeProvider theme={theme}>
