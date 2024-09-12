@@ -58,11 +58,3 @@ export const Input = styled.input`
     font-size: 16px;
     outline: none;
 `
-export const Results = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: ${({ theme }) => theme.spaces.small};
-`

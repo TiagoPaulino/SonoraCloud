@@ -1,8 +1,10 @@
 import { ChangeEvent, FormEvent } from "react";
-import { Container, Input, Results, SeachForm } from "./SearchPage.styled";
-import { setSearchWord } from "@/store/searchPage.slice";
+import { Container, Input, SeachForm } from "./SearchPage.styled";
+import { setResults, setSearchWord } from "@/store/searchPage.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store/store";
+import SearchResolts from "./actions/searchResolts";
+import { ResultSeach } from "./components/Result/Result";
 
 export const SeachPage = () => {
     const dispatch = useDispatch()
@@ -11,7 +13,9 @@ export const SeachPage = () => {
 
     const handleSearch = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        console.log(searchWord)
+        const newSearchResolts = new SearchResolts(searchWord).getResolts().then((resolts)=> {
+            console.log(resolts)
+            dispatch(setResults(resolts))})
     }
     const handleSearchWord = (e:ChangeEvent<HTMLInputElement>)=>{
         dispatch(setSearchWord(e.target.value))
@@ -22,9 +26,7 @@ export const SeachPage = () => {
       <SeachForm onSubmit={(e) => handleSearch(e)}>
         <Input onChange={(e) => handleSearchWord(e)} placeholder="Tacks, Albums, Artists, Tags..." />
       </SeachForm>
-      <Results>
-        
-      </Results>
+      <ResultSeach />
     </Container>
   );
 };
