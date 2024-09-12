@@ -45,7 +45,7 @@ export const SeekBar = () => {
   return (
     <Container>
       <Timer>{formatTime(Number(currentTime))}</Timer>
-      <Seeker onChange={handleSeeker} percent={percent} value={currentTime || 0} min={0} max={endTimeSong} />
+      <Seeker onChange={handleSeeker} $percent={percent} value={currentTime || 0} min={0} max={endTimeSong} />
       <Timer>{formatTime(Number(endTimeSong))}</Timer>
     </Container>
   );

@@ -9,7 +9,7 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 export const Seeker = styled.input.attrs({ type: "range" })<{
-  percent: number | string;
+  $percent: number ;
 }>`
   appearance: none;
   width: 300px;
@@ -23,7 +23,7 @@ export const Seeker = styled.input.attrs({ type: "range" })<{
     background: linear-gradient(
       to right,
       ${({ theme }) => theme.colors.background.highlight} 0%,
-      ${({ theme }) => theme.colors.background.highlight} ${({ percent }) => percent + "%"},
+      ${({ theme, $percent }) => theme.colors.background.highlight} ${( {$percent} ) => $percent + "%"},
       ${({ theme }) => theme.colors.background.tertiary} 0%,
       ${({ theme }) => theme.colors.background.tertiary} 100%
     );
