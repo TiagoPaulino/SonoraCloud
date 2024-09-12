@@ -4,7 +4,7 @@ import { RowIten } from "@/store/homePage.slice"
 
 interface RowProps {
   name?: string
-  itens?: RowIten[]
+  itens: RowIten[] 
 }
 
 export const Row:React.FC<RowProps> = ({ name, itens }) => {
