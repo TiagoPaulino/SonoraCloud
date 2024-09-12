@@ -6,7 +6,7 @@ import { store } from "@/store/store";
 import Player from "@/components/player";
 import SideMenu from "@/components/sidemenu";
 
-export const LayoutApp = ({ children }: { children: React.ReactNode }) => {
+export default function LayoutApp ({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider theme={theme}>
       <Provider store={store}>

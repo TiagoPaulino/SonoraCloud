@@ -1,11 +1,10 @@
-'use client'
-import {LayoutApp} from "@/app/layoutApp"; 
+import LayoutApp from "@/app/layoutApp";
 import { HomeBoard } from "@/components/maindashboard/Home/HomeBoard";
 
-export default function Home(){
+export default function Home() {
   return (
-    <LayoutApp>
-            <HomeBoard />      
-    </LayoutApp>
+      <LayoutApp>
+        <HomeBoard />
+      </LayoutApp>
   );
 }
