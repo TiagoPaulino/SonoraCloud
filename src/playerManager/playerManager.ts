@@ -154,6 +154,12 @@ class PlayerManager{
     set playList(list:string[]){
         this._playList = list
     }
+    mute(){
+        this.player.mute()
+    }
+    unmute(){
+        this.player.unmute()
+    }
 
 }
 
