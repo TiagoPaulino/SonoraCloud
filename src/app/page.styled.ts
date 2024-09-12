@@ -12,7 +12,7 @@ export const StyledPage = styled.div`
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     `
-export const Sidebar = styled.div`
+/* export const Sidebar = styled.div`
     background: ${({ theme }) => theme.colors.red};
     width:100%;
     height: 100%;
@@ -27,4 +27,4 @@ export const Player = styled.div`
     border-radius:${({ theme }) => theme.spaces.small};
     grid-column: span 2;
     grid-area: "player";
-`;
+`; */
