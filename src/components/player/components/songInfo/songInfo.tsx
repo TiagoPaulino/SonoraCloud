@@ -4,7 +4,6 @@ import { RootState } from "@/store/store";
 
 export const SongInfo = () => {
   const {name, artist} = useSelector((state: RootState) => state.player.playngSong);
-  console.log(name,artist)
   return (
     <Container>
       <SongTitle>
