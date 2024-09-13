@@ -6,13 +6,12 @@ export const Container = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     gap: ${({ theme }) => theme.spaces.small};
     padding: ${({ theme }) => theme.spaces.small};
     box-sizing: border-box;
     border-radius: ${({ theme }) => theme.spaces.small};
-    background-color: ${({ theme }) => theme.colors.background.tertiary};
     color: ${({ theme }) => theme.colors.white};
     font-size: 16px;
     overflow-y: scroll;

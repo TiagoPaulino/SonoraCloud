@@ -12,25 +12,25 @@ export const Container = styled.div`
     box-sizing: border-box;
     `
 export const ImageCover = styled.div`
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: ${({ theme }) => theme.colors.background.tertiary};
     `
-export const ProfileImage = styled.img`
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+export const AlbumImage = styled.img`
+    width: 140px;
+    height: 140px;
+    border-radius: ${({ theme }) => theme.spaces.small};
     object-fit: cover;
     `
-export const ProfileName = styled.p`
+export const AlbumName = styled.p`
     margin: 0px;
     color: ${({ theme }) => theme.colors.white};
     font-size: 14px;
-    max-width: 100px;
+    max-width: 140px;
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: bold;
