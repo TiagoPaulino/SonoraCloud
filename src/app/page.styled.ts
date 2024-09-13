@@ -7,24 +7,18 @@ export const StyledPage = styled.div`
     height: 100vh;
     grid-template-columns:10rem 1fr;
     grid-template-rows: 1fr 80px;
+    grid-template-areas: 'sidemenu mainboard'
+         'player player';
     gap: ${({ theme }) => theme.spaces.small};
     padding: ${({ theme }) => theme.spaces.small};
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; /* Oculta o menu lateral */
+        grid-template-areas: 
+         'mainboard'
+         'player'
+         'sidemenu';
+        grid-template-rows: auto 120px 60px ; /* Move o rodapé para o fundo */
+    }
     `
-/* export const Sidebar = styled.div`
-    background: ${({ theme }) => theme.colors.red};
-    width:100%;
-    height: 100%;
-    border-radius:${({ theme }) => theme.spaces.small};
-    grid-area: "sidebar";
-
-`;
-export const Player = styled.div`
-    background: ${({ theme }) => theme.colors.blue};
-    width:100%;
-    height: 100%;
-    border-radius:${({ theme }) => theme.spaces.small};
-    grid-column: span 2;
-    grid-area: "player";
-`; */

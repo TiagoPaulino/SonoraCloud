@@ -10,4 +10,7 @@ export const Container = styled.div`
     padding: ${({ theme }) => theme.spaces.small};
     box-sizing: border-box;
     gap: ${({ theme }) => theme.spaces.small};
+    @media screen and (max-width: 768px) {
+        
+    }
 `

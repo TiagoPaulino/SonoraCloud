@@ -12,4 +12,9 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.colors.background.primary};
     border-radius: ${({ theme }) => theme.spaces.small};
     box-sizing: border-box;
+    grid-area: sidemenu;
+    @media screen and (max-width: 768px) {
+        flex-direction: row;
+        width: 100%;
+        max-height: 60px;}
 `

@@ -10,6 +10,9 @@ export const Container = styled.div`
     justify-content: center;
     gap: ${({ theme }) => theme.spaces.medium};
     padding: ${({ theme }) => theme.spaces.medium} 0px;
+    @media screen and (max-width: 768px) {
+        flex-direction: row;
+    }
 
 `
 export const SelectorItem = styled.span`

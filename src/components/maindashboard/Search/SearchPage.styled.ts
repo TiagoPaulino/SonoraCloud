@@ -15,7 +15,7 @@ export const Container = styled.div`
     box-sizing: border-box;
     border-radius: ${({ theme }) => theme.spaces.small};
     gap: ${({ theme }) => theme.spaces.medium};
-    grid-area: "mainboard";
+    grid-area: mainboard;
     &::-webkit-scrollbar {
     display: inherit;
     width: 8px;
@@ -36,6 +36,12 @@ export const Container = styled.div`
     border-radius: ${({ theme }) => theme.spaces.small};
 
   }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        max-height: 100%;
+        grid-area: mainboard;
+    }
     
 `
 export const SeachForm = styled.form`

@@ -12,6 +12,9 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.colors.background.tertiary};
     overflow: hidden;
     border-radius: 0px 0px ${({ theme }) => theme.spaces.small} ${({ theme }) => theme.spaces.small};
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
    
 `
 export const Cover = styled.img`

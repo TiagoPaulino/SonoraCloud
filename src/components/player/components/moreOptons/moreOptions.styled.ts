@@ -8,6 +8,9 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     height: 100%;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `
 export const SpeakerButton = styled.button`
  background: transparent;

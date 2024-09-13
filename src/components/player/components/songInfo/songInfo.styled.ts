@@ -37,4 +37,8 @@ export const Container = styled.div`
       transform: translateX(-100%);
     }
   }
+  @media screen and (max-width: 768px) {
+        min-width: 100%;
+        font-size: ${({ theme }) => theme.typography.sizes.large};
+    }
 `;

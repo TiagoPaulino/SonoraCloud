@@ -10,4 +10,11 @@ export const Container = styled.div`
     box-sizing: border-box;
     background-color: #f0f0f0;
     grid-column: span 2;
+    grid-area: player;
+    @media screen and (max-width: 768px) {
+        max-height: 120px;
+        grid-column: span 1;
+        max-width: 100%;
+        flex-direction: column;
+    }
 `
