@@ -15,6 +15,8 @@ export const Container = styled.div`
     grid-area: sidemenu;
     @media screen and (max-width: 768px) {
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         max-height: 60px;}
 `

@@ -58,9 +58,9 @@ export const Card: React.FC<{CardData: CardData}> = ({CardData}) => {
           <CoverButton>
             <IoPlay onClick={handleClick}/>
           </CoverButton>
-          <CoverButton>
+{/*           <CoverButton>
             <IoAdd/>
-          </CoverButton>
+          </CoverButton>   sera adicionado no futuro*/}
         </CoverActions>
       </CoverContainer>
 
