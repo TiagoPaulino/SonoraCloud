@@ -18,9 +18,7 @@ export const setThemeColor = (image) => {
 
     const ColorFont = (palette) => {
        const [r,g,b] = palette[5]
-       console.log(r,g,b)
        const brightness = (0.299 * r + 0.587 * g + 0.114 * b); 
-       console.log(brightness)
        return !(brightness > 186) ? 'white' : 'black'
        
     }

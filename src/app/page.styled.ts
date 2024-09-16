@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledPage = styled.div`
-    background: #fff;
+    background: #fff; 
     color: ${({ theme }) => theme.typography.color.dark} !important;
     display: grid;
     height: 100vh;

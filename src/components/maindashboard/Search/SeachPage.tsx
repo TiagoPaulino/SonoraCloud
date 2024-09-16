@@ -15,7 +15,6 @@ export const SeachPage = () => {
     const handleSearch = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         const newSearchResolts = new SearchResolts(searchWord).getResolts().then((resolts)=> {
-            console.log(resolts)
             dispatch(setResults(resolts))})
     }
     const handleSearchWord = (e:ChangeEvent<HTMLInputElement>)=>{
