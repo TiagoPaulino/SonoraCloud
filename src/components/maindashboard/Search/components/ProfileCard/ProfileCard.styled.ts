@@ -28,7 +28,7 @@ export const ProfileImage = styled.img`
     `
 export const ProfileName = styled.p`
     margin: 0px;
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.typography.color.dark};
     font-size: 14px;
     max-width: 100px;
     overflow: hidden;

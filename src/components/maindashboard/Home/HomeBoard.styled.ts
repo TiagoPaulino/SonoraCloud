@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
+    transition: all 0.3s ease-in-out;
     width: 100%;
     max-height: 100%;
     overflow-y: scroll;

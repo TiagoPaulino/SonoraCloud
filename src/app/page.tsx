@@ -8,8 +8,8 @@ import Player from "@/components/player";
 import SideMenu from "@/components/sidemenu";
 import { HomeBoard } from "@/components/maindashboard/Home/HomeBoard";
 
-export default function Home() {
-  
+
+export default function Home() { 
 
   return (
     <ThemeProvider theme={theme}>

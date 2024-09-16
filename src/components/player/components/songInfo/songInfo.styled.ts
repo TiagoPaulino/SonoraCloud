@@ -6,7 +6,7 @@ export const SongSubtitle = styled.p`
   padding: 0px;
   font-size: ${({ theme }) => theme.typography.sizes.regular};
   font-weight: 400;
-  color: ${({ theme }) => theme.typography.color.black};
+  color: ${({ theme }) => theme.typography.color.dark};
   filter: opacity(0.8);
 `;
 

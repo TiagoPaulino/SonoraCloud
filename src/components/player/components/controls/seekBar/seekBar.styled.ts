@@ -7,6 +7,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: ${({ theme }) => theme.typography.color.dark};
 `;
 export const Seeker = styled.input.attrs({ type: "range" })<{
   $percent: number ;

@@ -5,6 +5,7 @@ import { RootState } from "@/store/store";
 import { useEffect } from "react";
 import { RowFetch } from "./actions/createRows";
 import { rowUpdate } from "@/store/homePage.slice";
+import { ThemeProvider } from "styled-components";
 
 export const HomeBoard = () => {
   const Rows = useSelector((state:RootState)=>state.homePage.rows)
@@ -33,11 +34,16 @@ export const HomeBoard = () => {
     
   },[])
 
+  const theme = useSelector((state:RootState)=>state.theme)
+
   return (
+    <ThemeProvider theme={theme}>
+
     <Container>
       {Rows.map((row, index)=>(
         <Row key={index} name={row.name} itens={row.itens} />
       ))}
     </Container>
+    </ThemeProvider>
   );
 };

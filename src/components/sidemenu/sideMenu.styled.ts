@@ -13,6 +13,7 @@ export const Container = styled.div`
     border-radius: ${({ theme }) => theme.spaces.small};
     box-sizing: border-box;
     grid-area: sidemenu;
+    color: ${({ theme }) => theme.typography.color.dark};
     @media screen and (max-width: 768px) {
         flex-direction: row;
         align-items: center;

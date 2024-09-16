@@ -60,7 +60,7 @@ export const Input = styled.input`
     box-sizing: border-box;
     border: none;
     background-color: ${({ theme }) => theme.colors.background.tertiary};
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.typography.color.dark};
     font-size: 16px;
     outline: none;
 `

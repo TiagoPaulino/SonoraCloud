@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Button = styled.button`
     background-color: ${({ theme })=> theme.colors.background.tertiary};
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.typography.color.dark};
     padding: ${({ theme }) => theme.spaces.small};
     border-radius: 50%;
     border: none;

@@ -6,6 +6,7 @@ export const Container = styled.div`
   justify-content: start;
   gap: ${({ theme }) => theme.spaces.medium};
   max-width: 100%;
+  color: ${({ theme }) => theme.typography.color.dark};
 `;
 export const RowTitle = styled.span`
   font-size: ${({ theme }) => theme.typography.sizes.large};
@@ -18,12 +19,11 @@ export const RowContainer = styled.div`
   align-items: start;
   gap: ${({ theme }) => theme.spaces.medium};
   width: 100%;
-  overflow-y: hidden;
+  overflow-y: auto;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scroll-snap-align: start;
-  -webkit-overflow-scrolling: touch;
   padding-bottom: ${({ theme }) => theme.spaces.small};
   margin-bottom: 8px;
   &:hover {

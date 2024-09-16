@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const CoverButton = styled.button`
         display: none;
         background-color: ${({ theme }) => theme.colors.background.tertiary};
-        color: ${({ theme }) => theme.colors.black};
+        color: ${({ theme }) => theme.typography.color.dark};
         padding: ${({ theme }) => theme.spaces.small};
         border-radius: 50%;
         cursor: pointer;

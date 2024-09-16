@@ -24,7 +24,6 @@ export const RowContainer = styled.div`
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scroll-snap-align: start;
-  -webkit-overflow-scrolling: touch;
   padding-bottom: ${({ theme }) => theme.spaces.small};
   margin-bottom: 8px;
   &:hover {

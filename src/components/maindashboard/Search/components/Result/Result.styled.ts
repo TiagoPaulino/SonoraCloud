@@ -12,7 +12,7 @@ export const Container = styled.div`
     padding: ${({ theme }) => theme.spaces.small};
     box-sizing: border-box;
     border-radius: ${({ theme }) => theme.spaces.small};
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.typography.color.dark};
     font-size: 16px;
     overflow-y: scroll;
     overflow-x: hidden;

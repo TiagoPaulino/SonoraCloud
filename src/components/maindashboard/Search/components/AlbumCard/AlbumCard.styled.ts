@@ -28,7 +28,7 @@ export const AlbumImage = styled.img`
     `
 export const AlbumName = styled.p`
     margin: 0px;
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.typography.color.dark};
     font-size: 14px;
     max-width: 140px;
     overflow: hidden;

@@ -8,6 +8,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     height: 100%;
+    color: ${({ theme }) => theme.typography.color.dark};
     @media screen and (max-width: 768px) {
         display: none;
     }
@@ -20,6 +21,7 @@ export const SpeakerButton = styled.button`
  justify-content: center;
  align-items: center;
  font-size: 18px;
+ color: ${({ theme }) => theme.typography.color.dark};
 `
 export const VolumeControler = styled.input.attrs({type: "range"})<{percent?: number | string}>`
     appearance: none;

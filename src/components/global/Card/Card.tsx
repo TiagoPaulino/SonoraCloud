@@ -11,8 +11,6 @@ import {
 import { SoundPlayer } from "@/playerManager/playerManager";
 import { setIsPlayng, setPlayngNow, setUpdateEndTimeSong } from "@/playerManager/playerManage.updateStore";
 import { formatTime } from "@/utils/formatTime";
-import { RootState } from "@/store/store";
-import { useSelector } from "react-redux";
 
 interface CardData {
   id: string,
@@ -48,6 +46,7 @@ export const Card: React.FC<{CardData: CardData}> = ({CardData}) => {
     setUpdateEndTimeSong(CardData.duration)
     SoundPlayer.play();
     setIsPlayng(true)
+
   };
 
   return (

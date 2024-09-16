@@ -18,6 +18,8 @@ export const MoreOptions = () => {
     SoundPlayer.volume = stateVolume;
   };
   const handleWheel = (e: React.WheelEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (e.deltaY > 0) {
       if (stateVolume === 0) return;
       changeVolume(stateVolume - 5);

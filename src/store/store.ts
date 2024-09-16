@@ -7,6 +7,7 @@ import playingSlice from './playing.slice';
 import homePageSlice from './homePage.slice';
 import playerSlice from './player.slice';
 import searchPageSlice from './searchPage.slice';
+import themeSlice  from './theme.slice';
 
 
 
@@ -19,7 +20,8 @@ export const store = configureStore({
     playListPage: playListPageSlice,
     playing: playingSlice,
     player: playerSlice,
-    searchPage: searchPageSlice
+    searchPage: searchPageSlice, 
+    theme: themeSlice
   },
 });
 
