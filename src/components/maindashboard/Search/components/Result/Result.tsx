@@ -7,8 +7,6 @@ import { Row } from "../Row/Row";
 
 export const ResultSeach: React.FC = () => {
   const ResultData = useSelector((state: RootState) => state.searchPage);
-  console.log(ResultData);
-
   return <Container>
         {ResultData.results.artists?  <Row title="Artists" itens={ResultData.results.artists} />: null}
         {ResultData.results.albums?  <Row title="Albums" itens={ResultData.results.albums} />: null}

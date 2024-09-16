@@ -19,7 +19,6 @@ export const MoreOptions = () => {
   };
   const handleWheel = (e: React.WheelEvent<HTMLInputElement>) => {
     e.preventDefault();
-    e.stopPropagation();
     if (e.deltaY > 0) {
       if (stateVolume === 0) return;
       changeVolume(stateVolume - 5);
@@ -39,10 +38,12 @@ export const MoreOptions = () => {
       <VolumeControler
         onChange={(e) => changeVolume(Number(e.target.value))}
         onWheel={(e) => handleWheel(e)}
+        onMouseEnter={(e) => e.stopPropagation()}
         min={0}
         max={100}
         value={stateVolume}
         percent={stateVolume}
+
       />
     </Container>
   );

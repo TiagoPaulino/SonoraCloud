@@ -22,7 +22,7 @@ export const RowContainer = styled.div`
   overflow-y: auto;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   scroll-snap-align: start;
   padding-bottom: ${({ theme }) => theme.spaces.small};
   margin-bottom: 8px;

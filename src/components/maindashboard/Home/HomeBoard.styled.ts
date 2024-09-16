@@ -6,7 +6,7 @@ export const Container = styled.div`
     transition: all 0.3s ease-in-out;
     width: 100%;
     max-height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: start;
