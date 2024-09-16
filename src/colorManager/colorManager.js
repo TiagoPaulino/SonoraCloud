@@ -17,13 +17,12 @@ export const setThemeColor = (image) => {
     const hexPalette = colorPaletteToHex(palette)
 
     const ColorFont = (palette) => {
-       const [r,g,b] = palette[5]
+       const [r,g,b] = palette[1]
        const brightness = (0.299 * r + 0.587 * g + 0.114 * b); 
-       return !(brightness > 186) ? 'white' : 'black'
-       
+       return (brightness < 180) ? 'white' : 'black'
     }
     const background = {
-        primary: hexPalette[5],
+        primary: hexPalette[1],
         secondary: hexPalette[4],
         tertiary: hexPalette[3],
         highlight: hexPalette[2]
