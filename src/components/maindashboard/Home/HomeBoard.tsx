@@ -1,3 +1,4 @@
+'use client'
 import { useDispatch, useSelector } from "react-redux";
 import { Row } from "./components/Row/Row";
 import { Container } from "./HomeBoard.styled";

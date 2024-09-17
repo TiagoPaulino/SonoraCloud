@@ -18,11 +18,9 @@ export const Container = styled.div`
     gap: ${({ theme }) => theme.spaces.medium};
     grid-area: mainboard;
     &::-webkit-scrollbar {
-    display: inherit;
     width: 8px;
     height: 8px;
     border-radius: ${({ theme }) => theme.spaces.small};
-    box-sizing: border-box;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -38,8 +36,7 @@ export const Container = styled.div`
 
   }
   @media screen and (max-width: 768px) {
-        width: 100%;
-        max-height: 100%;
+        width:100%;
         padding: ${({ theme }) => theme.spaces.small};
     }
     

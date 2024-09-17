@@ -19,5 +19,6 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
         width: 100%;
-        max-height: 60px;}
+        max-height: 60px
+    }
 `

@@ -1,3 +1,4 @@
+'use client'
 import { ThemeProvider } from "styled-components";
 import { PlayerCover } from "./components/PlayerCover/PlayerCover";
 import { PlayListList } from "./components/PlayListList/PlayListList";

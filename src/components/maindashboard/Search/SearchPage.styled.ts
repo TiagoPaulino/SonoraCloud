@@ -38,8 +38,7 @@ export const Container = styled.div`
   }
 
     @media screen and (max-width: 768px) {
-        width: 100%;
-        max-height: 100%;
+        width: 98%;
         grid-area: mainboard;
     }
     

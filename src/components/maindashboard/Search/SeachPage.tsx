@@ -1,3 +1,4 @@
+'use client'
 import { ChangeEvent, FormEvent } from "react";
 import { Container, Input, SeachForm } from "./SearchPage.styled";
 import { setResults, setSearchWord } from "@/store/searchPage.slice";

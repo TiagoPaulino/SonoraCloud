@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import theme from "@/theme";
 import { ThemeProvider } from "styled-components";
 import { StyledPage } from "./page.styled";

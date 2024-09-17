@@ -14,11 +14,16 @@ export const StyledPage = styled.div`
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     @media (max-width: 768px) {
-        grid-template-columns: 1fr; /* Oculta o menu lateral */
+        height: calc(100vh - env(safe-area-inset-top) - 40px);
+        width: 100%;
+        grid-template-columns: 100vw; /* Oculta o menu lateral */
+        box-sizing: initial;
         grid-template-areas: 
          'mainboard'
          'player'
          'sidemenu';
-        grid-template-rows: auto 120px 60px ; /* Move o rodapé para o fundo */
+        grid-template-rows: auto 120px 60px ;
+        padding :8px;
+        /* Move o rodapé para o fundo */
     }
     `

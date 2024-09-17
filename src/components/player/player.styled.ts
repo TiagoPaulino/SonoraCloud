@@ -16,7 +16,7 @@ export const Container = styled.div`
     @media screen and (max-width: 768px) {
         max-height: 120px;
         grid-column: span 1;
-        max-width: 100%;
+        width: 100%;
         flex-direction: column;
     }
 `
