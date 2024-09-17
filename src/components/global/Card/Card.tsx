@@ -11,6 +11,7 @@ import {
 import { SoundPlayer } from "@/playerManager/playerManager";
 import { setIsPlayng, setPlayngNow, setUpdateEndTimeSong } from "@/playerManager/playerManage.updateStore";
 import { formatTime } from "@/utils/formatTime";
+import MediaSession from "@/components/global/mediasession/MediaSession";
 
 interface CardData {
   id: string,
@@ -46,7 +47,7 @@ export const Card: React.FC<{CardData: CardData}> = ({CardData}) => {
     setUpdateEndTimeSong(CardData.duration)
     SoundPlayer.play();
     setIsPlayng(true)
-
+    MediaSession()
   };
 
   return (
