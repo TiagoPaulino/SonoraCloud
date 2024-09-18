@@ -20,7 +20,7 @@ export const Row:React.FC<RowProps> = ({ name, itens }) => {
 
                 {
                     itens?.map((item, id) => (
-                        <Card key={id} CardData={item}  />
+                        <Card key={id} {...item}  />
                     ))
                 }
 

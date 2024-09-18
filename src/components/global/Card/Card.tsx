@@ -30,21 +30,34 @@ interface CardData {
   audiodownload_allowed: true | false,
   
 }
-export const Card: React.FC<{CardData: CardData}> = ({CardData}) => {
+export const Card: React.FC<CardData> = ({id,
+  name,
+  album_id,
+  artist_id,
+  duration,
+  artist_name,
+  playlistadddate,
+  position,
+  license_ccurl,
+  album_image,
+  image,
+  audio,
+  audiodownload,
+  audiodownload_allowed}) => {
   const handleClick = () => {
-    if (CardData.audio) {
-      SoundPlayer.load(CardData.audio);
+    if (audio) {
+      SoundPlayer.load(audio);
       setPlayngNow(
-        {name: CardData.name,
-        artist: CardData.artist_name,
-        album: { name: CardData.album_id, thumbPath: CardData.album_image },
+        {name: name,
+        artist: artist_name,
+        album: { name: album_id, thumbPath: album_image },
         timeSeconds: 0,
-        timeMinutes: formatTime(Number(CardData.duration)),
-        midiaPath: CardData.audio,
-        thumbPath: CardData.image || CardData.album_image,
+        timeMinutes: formatTime(Number(duration)),
+        midiaPath: audio,
+        thumbPath: image || album_image,
         isLiked: false}
       )}
-    setUpdateEndTimeSong(CardData.duration)
+    setUpdateEndTimeSong(duration)
     SoundPlayer.play();
     setIsPlayng(true)
     MediaSession()
@@ -53,7 +66,7 @@ export const Card: React.FC<{CardData: CardData}> = ({CardData}) => {
   return (
     <Container>
       <CoverContainer>
-        <Cover src={CardData.image} />
+        <Cover src={image} />
         <CoverActions>
           <CoverButton>
             <IoPlay onClick={handleClick}/>
@@ -64,8 +77,8 @@ export const Card: React.FC<{CardData: CardData}> = ({CardData}) => {
         </CoverActions>
       </CoverContainer>
 
-      <Title>{CardData.name}</Title>
-      <Subtitle>{CardData.artist_name}</Subtitle>
+      <Title>{name}</Title>
+      <Subtitle>{artist_name}</Subtitle>
     </Container>
   );
 };

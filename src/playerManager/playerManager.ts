@@ -23,6 +23,8 @@ export const TrackMock = {
   audiodownload_allowed: true,
 };
 
+
+
 export const updatePlayerState = (track: typeof TrackMock) => {
     const playngSong = {
         name: track.name, 
@@ -41,12 +43,11 @@ export const updatePlayerState = (track: typeof TrackMock) => {
     store.dispatch(playerUpdateEndTimeSong(Number(track.duration)))
 }
 class Player{
-    volumeValue:number
+    volumeValue:number = store.getState().player.volume
     player: Howl | null = null
     _playId: number = 0
-    constructor(volumeValue:number|null = 100){
-        if(volumeValue) this.volumeValue = volumeValue
-        this.volumeValue = 100
+    constructor(volumeValue:number = store.getState().player.volume ){
+        this.volumeValue = volumeValue 
     }
     load(url:string):void{
         this.player = new Howl({
@@ -61,6 +62,8 @@ class Player{
     play():void{
         if(!this.player) return
         this._playId = this.player.play()
+        this.player.volume(this.volumeValue/100)
+        this.player.mute(store.getState().player.isMuted)
 
     }
     get playId():number{
@@ -159,6 +162,19 @@ class PlayerManager{
     }
     unmute(){
         this.player.unmute()
+    }
+
+    /* Playlist */
+
+    addSongToPlaylist(song:string):void{
+        this._playList.push(song)
+    }
+
+    removeSongFromPlaylist(song:string):void{
+        const index = this._playList.indexOf(song)
+        if(index > -1){
+            this._playList.splice(index, 1)
+        }
     }
 
 }
