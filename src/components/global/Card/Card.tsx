@@ -13,7 +13,7 @@ import { setIsPlayng, setPlayngNow, setUpdateEndTimeSong } from "@/playerManager
 import { formatTime } from "@/utils/formatTime";
 import MediaSession from "@/components/global/mediasession/MediaSession";
 
-interface CardData {
+interface ICardData {
   id: string,
   name: string,
   album_id: string,
@@ -30,7 +30,7 @@ interface CardData {
   audiodownload_allowed: true | false,
   
 }
-export const Card: React.FC<CardData> = ({id,
+export const Card: React.FC<ICardData> = ({id,
   name,
   album_id,
   artist_id,
@@ -68,8 +68,8 @@ export const Card: React.FC<CardData> = ({id,
       <CoverContainer>
         <Cover src={image} />
         <CoverActions>
-          <CoverButton>
-            <IoPlay onClick={handleClick}/>
+          <CoverButton onClick={handleClick}>
+            <IoPlay />
           </CoverButton>
 {/*           <CoverButton>
             <IoAdd/>
