@@ -1,3 +1,4 @@
+import { Container } from "./AlbumPage.styled";
 
 
 
@@ -5,10 +6,10 @@
 export default function AlbumPage({albumId}:{albumId?:string | string[]}) {
 
     return (
-        <div>
+        <Container>
         <div>AlbumPage</div>
         <h1>{albumId}</h1>
-        </div>
+        </Container>
     )
     
 }
