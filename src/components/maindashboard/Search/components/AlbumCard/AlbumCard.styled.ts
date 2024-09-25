@@ -10,6 +10,7 @@ export const Container = styled.div`
     gap: ${({ theme }) => theme.spaces.small};
     padding: ${({ theme }) => theme.spaces.small};
     box-sizing: border-box;
+    cursor: pointer;
     `
 export const ImageCover = styled.div`
     width: 140px;

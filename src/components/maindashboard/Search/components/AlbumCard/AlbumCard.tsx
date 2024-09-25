@@ -19,8 +19,13 @@ export interface AlbumCardProps {
 }
 
 export const AlbumCard: React.FC<AlbumCardProps> = ({ name, image, id }) => {
+  const handleClick = () => {
+    if (id) {
+      window.location.href = `/album/${id}`;
+    }
+  }
   return (
-    <Container>
+    <Container onClick={handleClick}>
       <ImageCover>
         <AlbumImage src={image} />
       </ImageCover>
