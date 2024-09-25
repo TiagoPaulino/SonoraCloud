@@ -8,6 +8,7 @@ import homePageSlice from './homePage.slice';
 import playerSlice from './player.slice';
 import searchPageSlice from './searchPage.slice';
 import themeSlice  from './theme.slice';
+import albumPageSlice from './albumPage.slice';
 
 
 
@@ -18,10 +19,11 @@ export const store = configureStore({
     homePage: homePageSlice,
     sideMenu: sideMenuSlice,
     playListPage: playListPageSlice,
+    albumPage: albumPageSlice,
     playing: playingSlice,
     player: playerSlice,
     searchPage: searchPageSlice, 
-    theme: themeSlice
+    theme: themeSlice    
   },
 });
 

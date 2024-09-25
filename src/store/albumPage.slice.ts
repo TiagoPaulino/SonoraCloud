@@ -24,13 +24,25 @@ export interface Track {
 
 export const albumPageSlice = createSlice({
   name: "albumPage",
-  initialState: {} as AlbumData,
+  initialState: {
+    albumData: {
+      id: "",
+      name: "",
+      releasedate: "",
+      artist_id: "",
+      artist_name: "",
+      image: "",
+      zip: "",
+      zip_allowed: false,
+      tracks: [],
+    } as AlbumData,
+  },
   reducers: {
-    albumUpdate: (state, action: PayloadAction<AlbumData>) => {
-      state = action.payload;
+    albumUpdate: (state, action) => {
+      state.albumData = action.payload;
     },
   },
 });
 
 export const { albumUpdate } = albumPageSlice.actions;
-export default albumPageSlice.reducer
+export default albumPageSlice.reducer;
