@@ -5,10 +5,10 @@ import { TrackItemList } from "./components/TrackItemList";
 
 
 export const TracksList = () => {
-    const Tracks = useSelector((state: RootState) => state.albumPage.albumData.tracks);
+    const Tracks = useSelector((state: RootState) => state.albumPage.albumData?.tracks);
     return (
         <TrackListContainer>
-            {Tracks.map((track) => (
+            {Tracks && Tracks.map((track) => (
                 console.log(track),
                 <TrackItemList key={track.id} track={track} />
             ))}

@@ -36,13 +36,17 @@ export const albumPageSlice = createSlice({
       zip_allowed: false,
       tracks: [],
     } as AlbumData,
+    albumId: "",
   },
   reducers: {
     albumUpdate: (state, action) => {
       state.albumData = action.payload;
     },
+    setAlbumId: (state, action) => {
+      state.albumId = action.payload;
+    }
   },
 });
 
-export const { albumUpdate } = albumPageSlice.actions;
+export const { albumUpdate,setAlbumId } = albumPageSlice.actions;
 export default albumPageSlice.reducer;

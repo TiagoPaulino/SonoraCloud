@@ -19,7 +19,7 @@ export const AlbumHeader: React.FC = () => {
     (state: RootState) => state.albumPage.albumData
   );
   const TotalTIme = formatTime(
-    tracks.reduce((a, b) => a + parseInt(b.duration), 0)
+    tracks?.reduce((a, b) => a + parseInt(b.duration), 0)
   );
   return (
     <Header>
