@@ -1,3 +1,4 @@
+'use client';
 import { IoPlay } from "react-icons/io5";
 import {
   ActionsButtons,
@@ -34,12 +35,6 @@ export const AlbumHeader: React.FC = () => {
           </PlaylistDescription>
         </HeaderTexts>
         <ActionsButtons>
-          <Button>
-            <IoPlay />
-          </Button>
-          <Button>
-            <IoPlay />
-          </Button>
           <Button>
             <IoPlay />
           </Button>

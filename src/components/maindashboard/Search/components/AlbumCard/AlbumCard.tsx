@@ -1,3 +1,4 @@
+import { Router, useRouter } from "next/router";
 import {
   Container,
   ImageCover,
@@ -19,9 +20,10 @@ export interface AlbumCardProps {
 }
 
 export const AlbumCard: React.FC<AlbumCardProps> = ({ name, image, id }) => {
+  const router = useRouter();
   const handleClick = () => {
     if (id) {
-      window.location.href = `/album/${id}`;
+      router.push(`/album/${id}`);
     }
   }
   return (

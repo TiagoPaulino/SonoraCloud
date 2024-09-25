@@ -64,11 +64,11 @@ export const Card: React.FC<ICardData> = ({id,
   };
 
   return (
-    <Container>
+    <Container onClick={handleClick}>
       <CoverContainer>
         <Cover src={image} />
         <CoverActions>
-          <CoverButton onClick={handleClick}>
+          <CoverButton >
             <IoPlay />
           </CoverButton>
 {/*           <CoverButton>

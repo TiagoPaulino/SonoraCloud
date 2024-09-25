@@ -9,6 +9,7 @@ import { ResultSeach } from "./components/Result/Result";
 import { ThemeProvider } from "styled-components";
 
 export const SeachPage = () => {
+    const theme = useSelector((state:RootState)=>state.theme)
     const dispatch = useDispatch()
     const {searchWord} = useSelector((state: RootState) => state.searchPage)
 
@@ -21,7 +22,7 @@ export const SeachPage = () => {
     const handleSearchWord = (e:ChangeEvent<HTMLInputElement>)=>{
         dispatch(setSearchWord(e.target.value))
     }
-    const theme = useSelector((state:RootState)=>state.theme)
+    
 
   return (
     <ThemeProvider theme={theme}>
