@@ -18,7 +18,7 @@ export default function HomePageModal() {
                     }
                 />
                 <div style={ModalStyles}>
-                    <Image src="/img/logo.png" height={300} width={300} alt="SonoraCloud Logo"/>
+                    <Image src="/img/logo.png" height={200} width={200} alt="SonoraCloud Logo"/>
                     <h1 style={{ fontSize: "24px", margin: "0"}}>SonoraCloud.com</h1>
                     <small>beta</small>
                     <p style={{ fontSize: "16px", marginBottom: "20px"}}>Todas as suas músicas em um só lugar</p>
@@ -49,7 +49,7 @@ const ContainerStyles: React.CSSProperties = {
     backgroundPosition: "center",
     display: "flex",
     justifyContent: "center",
-    alignItems: "end",
+    alignItems: "center",
     fontFamily: "'Poppins', sans-serif",
     color: "white",
     gap: "20px"
@@ -65,5 +65,4 @@ const ModalStyles: React.CSSProperties = {
     padding: "20px",
     borderRadius: "10px",
     boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-    marginBottom: "100px"
 };
