@@ -31,7 +31,7 @@ export default function AlbumPage({
     };
 
     getData();
-  }, [albumId]);
+  }, [albumId, dispatch]);
 
   return (
     <ThemeProvider theme={theme}>

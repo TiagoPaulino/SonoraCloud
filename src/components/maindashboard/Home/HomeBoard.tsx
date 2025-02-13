@@ -33,7 +33,7 @@ export const HomeBoard = () => {
       });
     };
     createRows();
-  }, []);
+  }, [dispatch]);
 
   const theme = useSelector((state: RootState) => state.theme);
 
